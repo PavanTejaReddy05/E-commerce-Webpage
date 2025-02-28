@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>E-COMMERCE</h1>
+        <!-- <h3><a href="#Cart">Cart</a></h3> -->
+        <h3 id="Cart">Cart</h3>
+    </header>
+    <nav>
+        <div>
+            <label for="dropdown">Dropdown</label>
+            <select name="dropdown" id="dropdown">
+                <option value="2">2</option>
+                <option selected value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div>
+            <label for="Sort">Sort</label>
+        <select name="dropdown" id="Sort">
+            <option value="Low to High" selected>Price : Low to High</option>
+            <option value="High to Low">Price : High to Low</option>
+        </select>
+        </div>
+    </nav>
+    <main>
+        <div class="item" >
+            <img src="" alt="Item">
+            <p class="title"></p>
+            <p class="description"></p>
+            <p class="price">Price: $</p>
+            <button onclick="AddtoCart(this)">ADD TO CART</button>
+        </div>
+    </main>
+    <footer>
+        <button id="previous"><<</button>
+        <span id="pagination"></span>
+        <button id="after">>></button>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

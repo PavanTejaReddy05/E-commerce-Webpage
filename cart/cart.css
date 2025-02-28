@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    /* background-color: rgba(138, 145, 151, 0.888); */
+}
+h1{
+    display: inline;
+}
+.cart{
+    /* border: 2px solid black; */
+    margin: 20px 50px;
+    /* background-color: rgba(187, 191, 194, 0.888); */
+    background-color: rgba(187, 191, 194);
+}
+header{
+    background-color: rgba(187, 191, 194);
+    position: sticky;
+    top: 0px;
+    padding: 25px;
+    z-index: 3;
+}
+#HPage{
+    float: right;
+    padding: 15px;
+    background-color: blueviolet;
+    color: white;
+}
+#HPage:hover{
+    cursor: pointer;
+    background-color: rgb(155, 77, 228);
+    /* font-size: medium;
+    font-weight: 100; */
+}
+#Search{
+    font-weight: 500;
+    font-size: large;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+section{
+    width: 30%;
+    margin-right: 50px;
+    justify-self:end;
+}
+.container{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 4px 2px 4px;
+    background-color: transparent;
+    /* background-color: rgba(138, 145, 151, 0.888); */
+    /* background-color: white; */
+    border: none;
+}
+.item{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px 5px 10px;
+    background-color: white;
+    padding: 20px 0;
+}
+.item span{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.quantity{
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.quantity p{
+    padding: 10px;
+}
+.quantity button{
+    border-radius: 50%;
+    height: 40px;
+    width: 30px;
+    margin: 5px;
+    padding: 0px;
+}
+#plus:hover{
+    cursor: pointer;
+    background-color: beige;
+}
+.title{
+    width: 150px;
+    font-size: medium;
+}
+/* .ImgPrice{
+    display: flex;
+    flex-direction: column;
+} */
+
+img{
+    height: 120px;
+    width: 120px;
+}
+.description{
+    font-size:large;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+.Cart-Items{
+    width: 70%;
+    margin: 15px 5px 5px 10px;
+}
+aside{
+    position: sticky;
+    top: 85px;
+    height: 100%;
+    margin: 15px 5px 5px 10px;
+    width: 30%;
+    background-color: white;
+}
+h3{
+    margin-top: 25px;
+    justify-self: center;
+}
+.CartTotaldetails{
+    margin: 15px 10px 10px 10px;
+    border: 2px solid black;
+}
+.CartTotaldetails div{
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    /* border: 2px solid black; */
+    margin: 10px 25px 5px 25px;
+}
+.CartTotaldetails div button{
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    background-color:rgba(187, 191, 194);
+}
+.CartTotaldetails div button:hover{
+    cursor: pointer;
+    background-color: rgb(96, 138, 175);
+}
+.CartTotaldetails div button:disabled{
+    cursor: not-allowed;
+    background-color: rgb(146, 177, 205);
+}
+#CalPrice{
+    font-weight:bold ;
+}
+.popup{
+    display: none;
+    position: absolute;
+    border-radius: 15px;
+    top: 30%;
+    left: 35%;
+    padding: 25px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 5);
+    background-color: white;
+    text-align: center;
+    z-index: 1000;
+}
+.popup .cross, .popupcross{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+.popup p{
+    padding: 15px;
+}
+.popup button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Section</title>
+    <link rel="stylesheet" href="PaymentSection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="../index/index.html"><i class="fa fa-home" id="Home"></i></a>
+        <div class="Pagination">
+            <ul>
+                <li class="circle active" data-value="1">✔</li>
+                <li class="circle" data-value="2"><a href="#AddressDetails">2</a> </li>
+                <li class="circle" data-value="3"><a href="#PaymentDetails">3</a></li>
+                <li class="circle" data-value="4"><a href="#confirmation">4</a></li>   
+            </ul>
+            <div class="PrgBarDetls">
+                <span>add to cart</span>
+                <span>address</span>
+                <span>payment</span>
+                <span>place order</span>
+            </div>
+        </div>
+        <button ><a id="Cartbtn" href="../cart/cart.html">Cart</a></button>
+        <!-- <div class="btn-div">
+            
+        </div> -->
+    </header>
+
+    <div id="AddressDetails" class="AddressDetails">
+        <h3>ADDRESS DETAILS</h3>
+    
+        <label for="FName">First Name: </label>
+        <input  type="text" name="FirstName" oninput="this.value=this.value.replace(/[^A-Za-z]/g,'')" maxlength="15"  id="FName" required>
+
+        <label for="LName">Last Name: </label>
+        <input type="text" name="Last Name" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'')" maxlength="8" id="LName" required>
+
+        <label for="PhNo">Mobile Number: </label>
+        <input type="tel" name="Mobile Number" oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="10" id="PhNo" required>
+
+        <label for="AltNo">Alternate Number: </label>
+        <input type="tel" name="Alternate Number" oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="10" id="AltNo" required>
+
+        <label for="Pcode">Pincode: </label>
+        <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="6" name="Pincode" id="Pcode" required>
+
+        <label for="Address">Address: </label>
+        <textarea name="Address" id="Address" maxlength="60" required></textarea>
+
+        <label for="State">State</label>
+        <select name="State" id="State" required>
+            <option value="">select the State</option>
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+            <option value="">D</option>
+        </select>
+
+        <label for="Dist">District</label>
+        <select name="District" id="Dist" required>
+            <option value="">select the District</option>
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+            <option value="">D</option>
+        </select>
+        <button id="AddressSubmit" disabled>Submit</button>
+    </div>
+    <!-- <button id="Prev" disabled>Previous</button>
+    <button id="AddSubmit">Submit</button>
+    <button id="Next" >Next</button> -->
+
+    <div id="PaymentDetails" class="PaymentDetails">
+        <h3>PAYMENT DETAILS</h3>
+        <div class="OptionPayment">
+            <strong>Choose an Option for Payment</strong>
+
+            <div>
+                <input type="radio" name="Payment" id="PayPal">
+                <label for="PayPal">PayPal</label>
+            </div>
+            <div>
+                <input type="radio" name="Payment" id="GooglePay">
+                <label for="GooglePay">GooglePay</label>
+            </div>
+            <div>
+                <input type="radio" name="Payment" id="AmazonPay">
+                <label for="AmazonPay">AmazonPay</label>
+            </div>
+            <div>
+                <input type="radio" name="Payment" id="CoD">
+                <label for="CoD">Cash on Delivery</label>
+            </div>
+            <!-- <button>Previous</button> -->
+            <button id="PaymentDetailsSubmit" disabled>Submit</button>
+        </div>
+        <div class="CredCard">
+            <h4>Credit Card details</h4>
+            <input type="text" placeholder="Cred Card Number...">
+            <input type="month" name="month" id="month">
+            <input type="text" name="CVV" id="CVV" placeholder="CVV">
+            <button>Proceed to Pay</button>
+        </div>
+    </div>
+    <!-- <button id="Prev" disabled>Previous</button>
+    <button id="AddSubmit">Submit</button>
+    <button id="Next" >Next</button> -->
+
+    <div class="confirmation" id="confirmation">
+        <h4>ORDER CONFIRMATION PAGE</h4>
+        <p>Click on Place order to Place your order</p>
+        <button id="PlaceOrder" disabled>Place Order</button>
+    </div>
+
+    <script src="PaymentSection.js"></script>
+</body>
+</html>

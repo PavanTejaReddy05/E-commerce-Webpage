@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="cart">
+        <header>
+            <h1>Cart</h1>
+            <button id="HPage">Home Page</button>
+        </header>
+        <section>
+            <input id="Search" type="text" placeholder="Serach...">
+        </section>
+        <div class="container">
+            <div class="Cart-Items">
+                <div class="item" >
+                    <div class="ImgPrice">
+                        <img src="" alt="Item">
+                        <b><p id="price">Price: $</p></b>
+                    </div>
+                    <p class="title"></p>
+                    <p class="description"></p>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <p>1</p>
+                        <button class="plus">+</button>
+                    </div>
+                    <p id="CalPrice">Calculated Price: $</p>
+                    <span class="cross">&#10006;</span>
+                </div>
+            </div>
+            <aside class="AmountDetails">
+                <h3>CART SUMMARY</h3>
+                <div class="CartTotaldetails">
+                    <p>Amount Details:</p>
+                    <div>
+                        <strong>Cart Price: 0</strong>
+                        <!-- <p><b>Delivery Charges : $ </b>20</p>
+                         20 -->
+                        <!-- <p><b>GST : $ </b>22.59</p>  -->
+                        <!-- //22.59 -->
+                        <button onclick="CheckOutFunc()" disabled>CheckOut</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <span class="popupcross">&#10006;</span>
+        <p>Are you sure do you want to delete the Item?</p>
+        <img src="">
+        <button>Yes</button>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
