@@ -101,7 +101,7 @@ footer {
     justify-self: center;
 }
 
-@media(max-width:480px) {
+@media(max-width:320px) {
     header {
         justify-content: space-around;
         margin: 0px;
