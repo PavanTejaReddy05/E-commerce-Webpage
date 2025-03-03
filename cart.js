@@ -44,7 +44,7 @@ if(Cart.length>0){
     CartItem.appendChild(ptag)
 }
 HPage.addEventListener("click",((x)=>{
-    window.location.href="../index/index.html";
+    window.location.href="./index.html";
 }))
 Search.addEventListener("input",()=>{
     let val=Search.value.toLowerCase()
@@ -139,5 +139,5 @@ function TotalPrice(){
 function CheckOutFunc(){
     // alert("Button got clicked")
     // window.location.href="../PaymentSection/PaymentSection.html";
-    window.location.href="D:/Programming/Tasks/E-Commerce/PaymentSection/PaymentSection.html"
+    window.location.href="./PaymentSection.html"
 }

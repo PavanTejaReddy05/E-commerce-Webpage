@@ -9,7 +9,7 @@ let data = [];
 let CurrentPage = 1;
 const dropdown = document.getElementById("dropdown");
 const sort=document.getElementById("Sort");
-sort.addEventListener("change",SortFunc);
+sort.addEventListener("click",SortFunc);
 let ItemsPerPage = parseInt(dropdown.value);
 dropdown.addEventListener("change", dropdownfunc);
 let main = document.querySelector("main");
@@ -20,17 +20,19 @@ let NextButton = document.getElementById("after");
 let Cart = document.querySelector("#Cart")
 
 Cart.addEventListener("click", ((x) => {
-    window.location.href = "D:/Programming/Tasks/E-Commerce/cart/cart.html"
+    window.location.href = "./cart.html"
 }))
 function SortFunc(){
     let SortValue=sort.value;
-    if(SortValue==="Low to High"){
+    if(SortValue===""){
+        display(data)
+    }else if(SortValue==="Low to High"){
         data.sort((a,b)=>a.price-b.price);
+        display(data)
     }else if (SortValue === "High to Low"){
         data.sort((a,b)=>b.price-a.price);
+        display(data)
     }
-    
-    display(data)
 }
 function dropdownfunc() {
     ItemsPerPage = parseInt(this.value);
@@ -82,7 +84,7 @@ function AddtoCart(button) {
         sessionStorage.setItem("Product", JSON.stringify(cart));
         console.log("Product :" + Product);
         console.log("Successfully Added to Cart");
-        window.location.href = "../cart/cart.html"
+        window.location.href = "./cart.html"
     }
 }
 function UpdtPaginationData(data) {

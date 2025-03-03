@@ -17,7 +17,6 @@ let PlaceOrder=document.querySelector("#PlaceOrder");
 function CheckValidityFunc(){
     let allValid=true;
     AddressInputs.forEach(input=>{
-        PlaceOrder.disabled=false;
         if(!input.checkValidity()){
             allValid=false;
         }
@@ -38,12 +37,13 @@ AddressSubmit.addEventListener("click",()=>{
 OpionPayments.forEach((PaymentOption)=>{
     PaymentOption.addEventListener("change",()=>{
         PaymentDetailsSubmit.disabled=false;
-        PlaceOrder.disabled=false;
+        // PlaceOrder.disabled=false;
     })
 })
 
 PaymentDetailsSubmit.addEventListener("click",()=>{
     PaymentDetailsSubmit.disabled=true;
+    PlaceOrder.disabled=false;
     NextFunc(CurrentStep);
 })
 
@@ -52,7 +52,7 @@ PlaceOrder.addEventListener("click",()=>{
     alert("Order Accepted...")
     NextFunc(CurrentStep);
     setTimeout(()=>{
-        window.location.href="../index/index.html"
+        window.location.href="./index.html"
     },3000)
 })
 
