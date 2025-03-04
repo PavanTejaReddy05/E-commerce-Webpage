@@ -127,12 +127,15 @@ footer {
         margin-right: 10px;
 
     }
-
+    #Cart{
+        font-size: 0.7rem;
+    }
     .description {
-        width: 50px;
+        display: none;
+        /* width: 50px;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        white-space: nowrap; */
     }
     .price{
         font-size: medium;
