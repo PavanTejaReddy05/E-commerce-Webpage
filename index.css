@@ -130,6 +130,9 @@ footer {
     #Cart{
         font-size: 0.7rem;
     }
+    .title{
+        font-size: 0.5rem;
+    }
     .description {
         display: none;
         /* width: 50px;
@@ -137,8 +140,11 @@ footer {
         text-overflow: ellipsis;
         white-space: nowrap; */
     }
+    #AddtoCart{
+        font-size: small;
+    }
     .price{
-        font-size: medium;
+        font-size: small;
         font-weight: 600;
     }
 
